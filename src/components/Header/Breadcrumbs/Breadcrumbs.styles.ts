@@ -1,7 +1,11 @@
 import styled from "styled-components/macro";
 
-export const Breadcrumbs = styled.ul`
-    padding: 0;
+interface BreadcrumbsProps {
+    left: number,
+}
+
+export const Breadcrumbs = styled.ul<BreadcrumbsProps>`
+    padding: ${({ left }) => left}px;
     margin: 0;
     list-style: none;
     color: white;

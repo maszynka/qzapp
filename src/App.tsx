@@ -12,7 +12,7 @@ const App: React.FC = () => {
             <GlobalStyles />
             <AppWrap className="App">
                 <Header />
-                {/*<Content/>*/}
+                <Content/>
             </AppWrap>
         </BrowserRouter>
     );

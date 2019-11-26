@@ -4,6 +4,7 @@ import { Route, Link, RouteComponentProps } from "react-router-dom";
 import { BreadcrumbsItem as BreadcrumbsItemWrap } from "./BreadcrumbsItem.styles";
 
 export const BreadcrumbsItem: React.FC<RouteComponentProps> = ({ match }) => {
+    console.log(match);
     const urlParts = match.url.split("/");
     const lastUrlPart = urlParts[urlParts.length - 1];
 
