@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { slashSuffix } from "../../../data/helpers/string";
+import { Entry, Question } from "../../../types/quiz";
 
 interface match {
     isExact: boolean;
@@ -11,29 +12,12 @@ interface match {
 
 interface ListProps {
     match: match;
-    entries: EntryType[];
+    entries: Entry[];
     type: string;
 }
 
-interface QuestionType {
-    question: string;
-    answers: string[];
-    correct: number;
-    explanation: string;
-}
 
-interface QuizType {
-    label: string;
-    alias: string;
-    questions: QuestionType[];
-}
 
-interface EntryType {
-    label: string;
-    alias: string;
-    groups?: EntryType[];
-    quizzes?: QuizType[];
-}
 
 export const List: React.FC<ListProps> = ({ match, entries, type }) => {
     return (

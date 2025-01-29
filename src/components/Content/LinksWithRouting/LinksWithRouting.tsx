@@ -8,7 +8,7 @@ import { Entry as EntryType } from '../../../types/quiz';
 
 interface LinksWithRoutingProps {
  match: MatchType,
- entries: EntryType[]
+ entries: EntryType[] | readonly EntryType[]
 }
 
 export const LinksWithRouting: React.FC<LinksWithRoutingProps> = ({ match, entries }) => {
@@ -18,7 +18,7 @@ export const LinksWithRouting: React.FC<LinksWithRoutingProps> = ({ match, entri
         path={match.url}
         exact
         render={(props) => (
-          <List match={match} entries={entries} type="groups" {...props} />
+          <List entries={entries} type="groups" {...props} />
         )}
       />
       {entries.map((entry) => (
