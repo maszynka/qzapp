@@ -4,9 +4,9 @@ import { LinksWithRouting } from '../LinksWithRouting/LinksWithRouting';
 import { Match as MatchType } from '../../../types/routes';
 import { Entry as EntryType } from '../../../types/quiz';
 
-interface GroupProperties extends EntryType {
+type GroupProperties =  {
     match: MatchType
-}
+} & EntryType
 
 export const Group: React.FC<GroupProperties> = ({ match, label, groups, quizzes }) => (
   <>
