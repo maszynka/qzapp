@@ -11,10 +11,10 @@ export interface Quiz {
     questions: Question[]
 }
 
-export type Entry = Readonly<EntryRaw> | EntryRaw
+export type Entry = EntryRaw
 export type EntryRaw = {
     label: string,
     alias: string,
     groups?: Entry[],
-    quizzes?: Quiz[] | ReadonlyArray<Quiz>
+    quizzes?: Quiz[]
 }

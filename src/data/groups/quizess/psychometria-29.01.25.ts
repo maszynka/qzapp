@@ -1,5 +1,6 @@
+import { Quiz } from "../../../types/quiz";
 
-export default {
+export const quiz: Quiz = {
     label: "Psychometria",
     alias: "psychometria",
     quizzes: [{
@@ -921,6 +922,9 @@ export default {
                                                     }
         ]
     }]
-};
+} as const;
+
+export default quiz;
+
 
 

@@ -8,7 +8,12 @@ export const Content: React.FC = () => (
     <ContentWrap>
         <Route
             path="/"
-            render={({ match }) => <Group match={match} {...quizData} />}
+            render={({ match }) => <Group match={match} 
+            label={quizData.label} 
+            alias={quizData.alias}
+            //  groups={quizData.groups}
+              quizzes={quizData.quizzes}
+              />}
         />
     </ContentWrap>
 );
